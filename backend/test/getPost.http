@@ -1,0 +1,3 @@
+GET  http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpZCI6IjY4MDY3MjQyZjk5M2ZhY2EwODYwOGU2MyIsImlhdCI6MTc0NTYwMjQxMCwiZXhwIjoxNzQ1NjA2MDEwfQ.j3rqcGNVgHo9ZcpjWZ_laSBGUUmxMzx7zSZjSlbSY1o

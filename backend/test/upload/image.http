@@ -1,0 +1,4 @@
+### Upload Image to Cloudinary
+POST http://localhost:5000/api/upload/image
+Content-Type: multipart/form-data
+# Choose key as `image` and select a file in your HTTP client (Postman/Thunder Client)

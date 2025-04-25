@@ -1,0 +1,24 @@
+
+### Create post with image
+POST http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpYXQiOjE3NDUzMjI4NzEsImV4cCI6MTc0NTMyNjQ3MX0.HeHv76C0MUiaMHZiT8bxlk8nfLlYabz8rCFhL7f9mb8
+Content-Type: multipart/form-data
+
+------WebKitFormBoundary
+Content-Disposition: form-data; name="title"
+
+My First Post
+------WebKitFormBoundary
+Content-Disposition: form-data; name="content"
+
+This is the content
+------WebKitFormBoundary
+Content-Disposition: form-data; name="authorId"
+
+6623c7130dabcdef98765432
+------WebKitFormBoundary
+Content-Disposition: form-data; name="image"; filename="goals.jpg"
+Content-Type: image/jpeg
+
+< ./goals.jpg
+------WebKitFormBoundary--

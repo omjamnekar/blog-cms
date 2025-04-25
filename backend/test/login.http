@@ -1,0 +1,9 @@
+POST  http://localhost:5000/api/login
+Content-Type: application/json
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzQ1MjczMTY3LCJleHAiOjE3NDUyNzY3Njd9.ZmyRF9cHrOWyVoAFRwXRi0Ie644CijOcYbPlXSx4_YI
+
+{
+  
+  "email": "john@example.com",
+  "password": "123456"
+}

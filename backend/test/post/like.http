@@ -1,0 +1,2 @@
+# POST /api/posts/<postId>/like/<userId>
+POST http://localhost:5000/api/posts/6806c2662a93325f8ce58f94/like/6623c7130dabcdef98765432

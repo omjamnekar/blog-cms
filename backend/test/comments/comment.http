@@ -1,0 +1,18 @@
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpYXQiOjE3NDUyNTk0NTQsImV4cCI6MTc0NTI2MzA1NH0.lfMa_ira5ZKHhLzlz2Xpa_wPhh4_uBHV3s_hb6D5Q14
+
+
+### Add Comment to a Post (replace :postId)
+POST http://localhost:5000/api/posts/68067a28fda922347d11aa76/comments
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "author": "John Doe",
+  "content": "This post is very helpful!"
+}
+
+
+
+### Get Comments for a Post (replace :postId)
+GET http://localhost:5000/api/posts/68067a28fda922347d11aa76/comments
