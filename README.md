@@ -1,4 +1,4 @@
-# 📝 Blog CMS
+# Blog CMS
 
 This is a TypeScript-based RESTful API backend for a Blog CMS application. Built using **Express**, **MongoDB**, and **Cloudinary**, it provides full support for user authentication, post management, comments, likes, category filtering, markdown rendering, and image uploads.
 
@@ -24,7 +24,7 @@ This is a TypeScript-based RESTful API backend for a Blog CMS application. Built
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 - **TypeScript**
 - **Express.js**
@@ -36,7 +36,7 @@ This is a TypeScript-based RESTful API backend for a Blog CMS application. Built
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 src/
@@ -51,14 +51,14 @@ src/
 
 ---
 
-## 🚀 Features
+## Features
 
-### 🔐 Authentication
+### Authentication
 
 - `POST /api/register` – Register user
 - `POST /api/login` – Login with JWT
 
-### 📝 Posts
+### Posts
 
 - `GET /api/posts` – Get all posts
 - `GET /api/posts/:id` – Get single post
@@ -73,7 +73,7 @@ src/
 - `POST /api/upload` – Upload image to Cloudinary
   - Accepts multipart/form-data
 
-### 💬 Comments
+### Comments
 
 - `POST /api/posts/:postId/comments` – Add comment to a post
 - `GET /api/posts/:postId/comments` – Get comments of a post
@@ -123,13 +123,13 @@ The server should be running on: `http://localhost:5000`
 
 ---
 
-## 📂 API Testing
+## API Testing
 
 This project includes test files in the `/test` folder (e.g., `login.http`, `setPost.http`) that can be used with the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension in VS Code.
 
 ---
 
-## 🧠 Author Notes
+## Author Notes
 
 - Likes are tracked per user using ObjectId comparison.
 - Post content supports Markdown.
@@ -138,7 +138,3 @@ This project includes test files in the `/test` folder (e.g., `login.http`, `set
 - Rate limiting middleware is added for security.
 
 ---
-
-## 📜 License
-
-MIT © 2025 YourName
