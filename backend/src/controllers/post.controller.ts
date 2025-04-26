@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 import Post from "../model/post";
 import fs from "fs";
 import mongoose from "mongoose";
-import { v2 as cloudinary } from "cloudinary";
+import cloudinary from "../utils/cloudinary";
 
 interface MulterRequest extends Request {
   file?: Express.Multer.File;
@@ -68,21 +68,23 @@ export const likePost = async (req: Request, res: Response) => {
       return;
     }
 
-    const hasLiked = post.likedBy.includes(new mongoose.Types.ObjectId(userId));
+    const userObjectId = new mongoose.Types.ObjectId(userId);
+
+    const hasLiked = post.likedBy.some((id) => id.equals(userObjectId));
+    console.log(hasLiked);
 
     if (hasLiked) {
-      post.likedBy = post.likedBy.filter(
-        (id) => !id.equals(new mongoose.Types.ObjectId(userId))
-      );
+      post.likedBy = post.likedBy.filter((id) => !id.equals(userObjectId));
       post.likes = Math.max(0, post.likes - 1);
     } else {
-      post.likedBy.push(new mongoose.Types.ObjectId(userId));
+      post.likedBy.push(userObjectId);
       post.likes += 1;
     }
 
     await post.save();
     res.json({ likes: post.likes, likedBy: post.likedBy });
   } catch (err) {
+    console.error(err); // <== Always good to log real error
     res.status(500).json({ message: "Failed to like/unlike post" });
   }
 };
@@ -94,6 +96,7 @@ export const incrementPostViews = async (req: Request, res: Response) => {
       res.status(404).json({ message: "Post not found" });
       return;
     }
+
     post.views += 1;
     await post.save();
     res.json({ views: post.views });

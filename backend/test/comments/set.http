@@ -1,0 +1,17 @@
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpZCI6IjY4MDY3MjQyZjk5M2ZhY2EwODYwOGU2MyIsImlhdCI6MTc0NTY3MjUyMSwiZXhwIjoxNzQ1Njc2MTIxfQ.bLUimw5483n9FZIy_M8gAtStZthcQS-5sV99j2cSRZI
+
+
+
+//postid
+POST http://localhost:5000/api/comments/6804f58768a0f9a2513ac243
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "user": "John Doe",
+  "content": "This post is very helpful!"
+}
+
+
+

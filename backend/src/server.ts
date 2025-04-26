@@ -7,8 +7,8 @@ import morgan from "morgan";
 
 import authRoutes from "./routes/auth.routes";
 import postRoutes from "./routes/post.routes";
-// import commentRoutes from "./routes/comment.routes";
-// import categoryRoutes from "./routes/category.routes";
+import commentRoutes from "./routes/comment.routes";
+import categoryRoutes from "./routes/category.routes";
 // import uploadRoutes from "./routes/upload.route";
 import { rateLimitMiddleware } from "./middleware/ratelimit.middleware";
 
@@ -27,8 +27,9 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use("/api", authRoutes);
 app.use("/api/posts", postRoutes);
+app.use("/api/categories", categoryRoutes);
+app.use("/api/comments", commentRoutes);
 // app.use("/api/posts", commentRoutes);
-// app.use("/api/categories", categoryRoutes);
 // app.use("/api/upload", uploadRoutes);
 
 // DB Connection

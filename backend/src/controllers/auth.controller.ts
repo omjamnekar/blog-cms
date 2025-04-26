@@ -24,7 +24,13 @@ export const register = async (req: Request, res: Response) => {
     });
     await user.save();
 
-    res.status(201).json({ message: "User registered successfully" });
+    const token = jwt.sign(
+      { email: user.email, id: user._id },
+      process.env.JWT_SECRET || "default_secret",
+      { expiresIn: "1h" }
+    );
+
+    res.status(200).json({ token, user });
   } catch (error) {
     res.status(500).json({ message: "Registration failed", error });
   }

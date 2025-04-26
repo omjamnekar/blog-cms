@@ -1,0 +1,14 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpZCI6IjY4MDY3MjQyZjk5M2ZhY2EwODYwOGU2MyIsImlhdCI6MTc0NTY3MjUyMSwiZXhwIjoxNzQ1Njc2MTIxfQ.bLUimw5483n9FZIy_M8gAtStZthcQS-5sV99j2cSRZI
+
+
+
+POST http://localhost:5000/api/categories
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "History"
+}
+
+
+

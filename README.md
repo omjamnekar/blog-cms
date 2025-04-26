@@ -1,6 +1,26 @@
-# 📝 Blog CMS Backend
+# 📝 Blog CMS
 
 This is a TypeScript-based RESTful API backend for a Blog CMS application. Built using **Express**, **MongoDB**, and **Cloudinary**, it provides full support for user authentication, post management, comments, likes, category filtering, markdown rendering, and image uploads.
+
+#### Login Page
+
+![Login Page](./assets/login.png)
+
+#### Register Page
+
+![Register Page](./assets/register.png)
+
+#### Hero Page
+
+![Hero Page](./assets/heropage.png)
+
+#### Dashboard
+
+![Dashboard](./assets/dashboard.png)
+
+#### Create Post
+
+![Create Post](./assets/create.png)
 
 ---
 

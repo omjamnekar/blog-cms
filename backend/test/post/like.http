@@ -1,2 +1,6 @@
-# POST /api/posts/<postId>/like/<userId>
-POST http://localhost:5000/api/posts/6806c2662a93325f8ce58f94/like/6623c7130dabcdef98765432
+# # POST /api/posts/<postId>/like/<userId>
+# POST http://localhost:5000/api/posts/6806c2662a93325f8ce58f94/like/68067242f993faca08608e63
+
+
+//REMOVE LIKE WITH SAME CALL
+POST http://localhost:5000/api/posts/6804f58768a0f9a2513ac243/like/68067242f993faca08608e63
